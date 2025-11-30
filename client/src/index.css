@@ -1,0 +1,144 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #1f2937;
+  background-color: #f6f7fb;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *::before, *::after { box-sizing: border-box }
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: rgba(255,255,255,0.92);
+    background-color: #0b0f19;
+  }
+  .card { border-color: #2a2f3a; background: #121826 }
+  .table th, .table td { border-color: #2a2f3a }
+  .table th { background: #1f2937; color: rgba(255,255,255,0.95) }
+  .form label { color: rgba(255,255,255,0.92) }
+  .table { background: #121826 }
+  .table td { color: rgba(255,255,255,0.92) }
+}
+nav.nav { display: flex; gap: 16px; padding: 12px 80px; border-bottom: 1px solid #e5e7eb; background: #ffffff; position: sticky; top: 0; z-index: 10; width: 100% }
+.brand-nav { justify-content: space-between; align-items: center }
+.brand { display: flex; align-items: center; gap: 8px; font-weight: 700 }
+.brand span { font-size: 1.25rem; font-weight: 800; color: #0f172a }
+.menu { display: flex; align-items: center; gap: 40px; flex: 1; justify-content: flex-end }
+.menu a { padding: 8px 12px; border-radius: 8px }
+.menu a:hover { background: #f3f4f6 }
+.menu a.active { background: #3b82f6; color: #fff }
+.link { background: transparent; border: none; color: #3b82f6 }
+.center { max-width: 760px; margin: 40px auto; padding: 24px; background: #ffffff; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.06) }
+.center.auth-card { max-width: 560px; width: 100% }
+.form { display: grid; gap: 12px }
+.form input, .form select { padding: 10px 12px; border: 1px solid #d1d5db; border-radius: 8px }
+.form label { display: block; font-weight: 600; color: #111827; margin: 4px 2px }
+.input-wrap { position: relative }
+.input-wrap .icon { position: absolute; inset: 0 auto 0 10px; display: grid; place-items: center; color: #6b7280 }
+.input-wrap input { width: 100%; padding-left: 36px }
+.input-wrap select { width: 100%; padding-left: 36px; padding-top: 28px }
+.auth-card .input-wrap input { padding-top: 28px }
+.auth-card .inline-label { position: absolute; left: 36px; right: auto; top: 6px; font-size: 12px; color: #6b7280; pointer-events: none; text-align: left }
+.auth-header { display: flex; align-items: center; gap: 10px; justify-content: center; margin-bottom: 12px }
+.auth-title { font-size: 1.8rem; font-weight: 800 }
+.auth-sub { color: #6b7280; font-size: 0.95rem }
+.auth-card { margin-top: 12px }
+.tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; background: #f3f4f6; padding: 6px; border-radius: 10px; margin-bottom: 16px }
+.tab { background: transparent; border: none; padding: 10px 0; border-radius: 8px; font-weight: 600; color: #111827 }
+.tab.active { background: #ffffff; box-shadow: inset 0 0 0 1px #e5e7eb }
+.btn-primary { width: 100%; background: #3b82f6 }
+.row { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; align-items: center }
+.pad { padding: 20px }
+.pad { padding: 20px 80px }
+.card { padding: 16px; border: 1px solid #e5e7eb; border-radius: 12px; min-width: 160px; background: #ffffff; box-shadow: 0 6px 16px rgba(0,0,0,0.05) }
+.card .title { font-size: 0.9rem; color: #6b7280 }
+.card .value { font-size: 1.4rem; font-weight: 600 }
+.card .icon { float: right }
+.card.compact { padding: 10px; width: 150px; min-width: 150px; text-align: center }
+.card.compact .title { font-size: 0.8rem }
+.card.compact .value { font-size: 1rem }
+.card .sub { margin-top: 4px; font-size: 0.88rem; color: #6b7280 }
+.button { background: #3b82f6; color: #fff; border: none; padding: 10px 16px; border-radius: 10px }
+.button.secondary { background: #1f2937 }
+.table { width: 100%; border-collapse: collapse; background: #ffffff; border-radius: 12px; overflow: hidden }
+.table th, .table td { border: 1px solid #e5e7eb; padding: 10px }
+.table th { background: #f3f4f6; text-align: left; color: #111827 }
+.table td { color: #111827 }
+.tag { padding: 4px 10px; border-radius: 999px; font-size: 0.8em; color: #111827; display: inline-block }
+.tag.green { background: #dcfce7 }
+.tag.red { background: #fee2e2 }
+.tag.yellow { background: #fef3c7 }
+.tag.orange { background: #ffedd5 }
+.error { color: #ef4444 }
+.info { color: #16a34a }
+.grid { display: grid; gap: 12px }
+.grid.cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)) }
+.grid.cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)) }
+.grid.cols-1 { grid-template-columns: 1fr }
+.loader { width: 24px; height: 24px; border: 3px solid #e5e7eb; border-top-color: #3b82f6; border-radius: 50%; animation: spin 1s linear infinite }
+@keyframes spin { to { transform: rotate(360deg) } }
+.calendar { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px }
+.calendar .day { padding: 10px; border: 1px solid #e5e7eb; border-radius: 8px; background: #ffffff; min-height: 60px }
+.calendar .day .date { font-size: 0.8rem; color: #6b7280 }
+.legend { display: flex; gap: 12px; padding: 8px 0 }
+.legend .item { display: flex; gap: 6px; align-items: center }
+/* page animation */
+.page { animation: fadeIn .4s ease both }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(6px) } to { opacity: 1; transform: none } }
+/* critters */
+.critters { position: fixed; inset: 0; pointer-events: none; z-index: 0 }
+.critter { position: absolute; left: 0; width: 32px; opacity: 0.6; filter: drop-shadow(0 2px 2px rgba(0,0,0,0.2)) }
+.critter.walk-left { animation: walkL var(--dur) linear infinite }
+.critter.walk-right { animation: walkR var(--dur) linear infinite }
+@keyframes walkL { from { transform: translateX(110vw) } to { transform: translateX(-10vw) } }
+@keyframes walkR { from { transform: translateX(-10vw) } to { transform: translateX(110vw) } }
+/* extra layout helpers */
+.grid.cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)) }
+.button.ghost { background: #e0e7ff; color: #1f2937 }
